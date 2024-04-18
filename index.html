@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/101_js_Volodymyr180688/assets/favicon-3e4c3c23.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>JavaScriptMasters</title>
+    
+    <script type="module" crossorigin src="/101_js_Volodymyr180688/commonHelpers.js"></script>
+    <link rel="modulepreload" crossorigin href="/101_js_Volodymyr180688/assets/vendor-774547bf.js">
+    <link rel="stylesheet" href="/101_js_Volodymyr180688/assets/vendor-562b8a13.css">
+    <link rel="stylesheet" href="/101_js_Volodymyr180688/assets/index-c285b357.css">
+  </head>
+  <body>
+    
+<!-- =====================OCHERETKO OLEH(START)==================== -->
+
+<section class="father-section">
+  <header class="centering">
+    <a
+      href="https://volodymyr180688.github.io/JavaScriptMasters/"
+      class="logo-flex"
+    >
+      <img src="data:image/jpeg;base64,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" alt="logo" class="logo" />
+      <h3 class="logo-jef">jefferson*</h3>
+    </a>
+
+    <div class="position-menu">
+      <p class="menu">Menu</p>
+      <ul class="hidden-menu">
+        <li class="menu-list"><a href="#About-me">About-me</a></li>
+        <li class="menu-list"><a href="#benefits">Benefits</a></li>
+        <li class="menu-list"><a href="#projects">Projects</a></li>
+        <li class="menu-list"><a href="#section-faq">FAQ</a></li>
+      </ul>
+    </div>
+
+    <a href="#work-together" class="link-order-tablet-dacktop">
+      <span class="order-h3-tablet-desktop">Order the project</span>
+    </a>
+    <svg class="icon-burger" id="myBtn">
+      <use href="/101_js_Volodymyr180688/assets/icons-a67e2ed4.svg#menu-mob"></use>
+    </svg>
+  </header>
+
+  <!-- ================Modal Window============================ -->
+  <div id="myModal" class="modal">
+    <svg class="close">
+      <use href="/101_js_Volodymyr180688/assets/icons-a67e2ed4.svg#close"></use>
+    </svg>
+    <div class="modal-content">
+      <ul class="li-cuild-ul">
+        <li class="link-item">
+          <a href="#About-me" class="reff">About-me</a>
+        </li>
+        <li class="link-item">
+          <a href="#benefits" class="reff">Benefits</a>
+        </li>
+        <li class="link-item">
+          <a href="#projects" class="reff">Projects</a>
+        </li>
+        <li class="link-item">
+          <a href="#section-faq" class="reff">FAQ</a>
+        </li>
+      </ul>
+      <a href="#work-together" class="link-order">
+        <span class="order-h3">Order the project</span>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- =====================OCHERETKO OLEH(END)==================== -->
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+    <div class="container-hero">
+  <section class="father-hero-saction">
+    <h1 class="king-text">
+      Hello. <br />I'm Fullstack developer Lloyd Jefferson.
+    </h1>
+    <ul class="link-message">
+      <li class="item-link-mesage">
+        <a
+          class="messages"
+          href="https://www.instagram.com/goitclub/"
+          target="_blank"
+          >IG</a
+        >
+      </li>
+      <li class="item-link-mesage">
+        <a
+          class="messages"
+          href="https://www.facebook.com/goITclub/"
+          target="_blank"
+          >FB</a
+        >
+      </li>
+      <li class="item-link-mesage">
+        <a
+          class="messages"
+          href="https://www.youtube.com/c/GoIT"
+          target="_blank"
+          >YT</a
+        >
+      </li>
+      <li class="item-link-mesage">
+        <a
+          class="messages"
+          href="https://github.com/Volodymyr180688/JavaScriptMasters"
+          target="_blank"
+          >GH</a
+        >
+      </li>
+      <li class="item-link-mesage-mailto">
+        <a class="email" href="mailto:lloydjefferson@gmail.com"
+          >lloydjefferson@gmail.com</a
+        >
+      </li>
+    </ul>
+  </section>
+</div>
+
+
+    <section class="about-me-section"  id="About-me">
+  <div class="about-me-container container">
+    
+      <h2 class="visually-hidden">About me</h2>
+  
+      <div class="about-me-description-and-photo-wrapper">
+        <div class="about-me-description">
+          <div class="about-me-description-wrapper">
+            <p class="about-me-text">
+              I work with people all over the world to create impressive and
+              <span class="func">functional</span>
+              <span class="websites">websites</span> that reflect each client's
+              unique personality.
+            </p>
+          </div>
+        </div>
+  
+        <div class="about-me-photo">
+          <picture>
+            <source
+              srcset="/101_js_Volodymyr180688/assets/image_desktop-17878a16.jpg 1x, /101_js_Volodymyr180688/assets/image_desktop@2x-b639bdec.jpg 2x"
+              media="(min-width: 1440px)"
+            />
+            <source
+              srcset="/101_js_Volodymyr180688/assets/image_tablet-cb3a7c6d.jpg 1x, /101_js_Volodymyr180688/assets/image_tablet@2x-1adc796d.jpg 2x"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="/101_js_Volodymyr180688/assets/image_mobile-f90a01e3.jpg 1x, /101_js_Volodymyr180688/assets/image_mobile@2x-8db83ed2.jpg 2x"
+              media="(max-width: 767px)"
+            />
+            <img src="/101_js_Volodymyr180688/assets/image_mobile-f90a01e3.jpg" alt="my-photo" />
+          </picture>
+        </div>
+      </div>
+  
+      <div class="accordion-in-about-me container">
+        <ul class="about-me-list">
+          <li class="accordion-ab">
+            <div class="about-me-title active" data-tab="tab1">
+              <h2 class="ac-title">About me</h2>
+              <div class="first-title-about-me" id="tab1">
+                <p class="first-title-text">
+                  I am Lloyd Jefferson, a talented programmer with extensive
+                  expertise in software development. I have an understanding of
+                  different programming languages and technologies, always ready
+                  to improve my skills. I always follow the latest trends and look
+                  for unconventional, creative solutions to problems. I have a
+                  high level of analytical skills and am able to effectively solve
+                  even the most difficult tasks encountered on the way.
+                </p>
+                <p class="first-title-text">
+                  Able to work both independently and in a team. I can effectively
+                  cooperate with colleagues, exchanging ideas and finding optimal
+                  solutions. Professional maturity allows you to calmly cope with
+                  challenges and stressful situations, while maintaining a high
+                  quality of work.I am always looking for opportunities for
+                  self-improvement. I actively study new technologies and
+                  practices to stay abreast of the latest innovations. I have a
+                  strong understanding of various programming languages,
+                  frameworks and architectural concepts that allow me to create
+                  efficient and scalable software.
+                </p>
+              </div>
+              <span>
+                <svg class="ac-icon" width="20" height="20">
+                  <use href="/101_js_Volodymyr180688/assets/icons-a67e2ed4.svg#Accordeon-top"></use>
+                </svg>
+              </span>
+            </div>
+            <div class="line-between-accordion-item"></div>
+          </li>
+          <li class="accordion-ab">
+            <div class="about-me-title" data-tab="tab2">
+              <h2 class="ac-title">Role</h2>
+              <div class="first-title-about-me accordion-open-about-me" id="tab2">
+                <p class="first-title-text">Frontend development</p>
+                <p class="first-title-text">HeadlessCMS,Wordpress</p>
+                <p class="first-title-text">Blender(enjoy)</p>
+              </div>
+              <span>
+                <svg class="ac-icon" width="20" height="20">
+                  <use href="/101_js_Volodymyr180688/assets/icons-a67e2ed4.svg#Accordeon-top"></use>
+                </svg>
+              </span>
+            </div>
+            <div class="line-between-accordion-item"></div>
+          </li>
+          <li class="accordion-ab">
+            <div class="about-me-title" data-tab="tab3">
+              <div>
+                <h2 class="ac-title">Education</h2>
+                <div
+                  class="first-title-about-me accordion-open-about-me"
+                  id="tab3"
+                >
+                  <p class="first-title-text">
+                    2018 - 2019 / Frontend Development Diploma, GoIT IT School,
+                    New York
+                  </p>
+                  <p class="first-title-text">
+                    2019 - 2020 / Advanced Web Development Certificate, GoIT IT
+                    School, New York
+                  </p>
+                  <p class="first-title-text">
+                    2020 - 2022 / Advanced Blender Animation Techniques, Academy
+                  </p>
+                </div>
+                <span>
+                  <svg class="ac-icon" width="20" height="20">
+                    <use href="/101_js_Volodymyr180688/assets/icons-a67e2ed4.svg#Accordeon-top"></use>
+                  </svg>
+                </span>
+              </div>
+             
+            </div>
+            <div class="line-between-accordion-item"></div>
+          </li>
+        </ul>
+      </div>
+
+  </div>
+  
+</section>
+
+    <section class="swiper-mini-section container">
+  <div class="swiper-container">
+    <div class="swiper-wrapper about-swiper-wrapper">
+      <div class="swiper-item swiper-slide active">HTML/CSS</div>
+      <div class="swiper-item swiper-slide">JavaScript</div>
+      <div class="swiper-item swiper-slide">React</div>
+      <div class="swiper-item swiper-slide">Node.js</div>
+      <div class="swiper-item swiper-slide">React Native</div>
+      <div class="swiper-item swiper-slide">Soft Skills</div>
+      <div class="swiper-item swiper-slide">HTML/CSS</div>
+      <div class="swiper-item swiper-slide">JavaScript</div>
+      <div class="swiper-item swiper-slide">React</div>
+      <div class="swiper-item swiper-slide">Node.js</div>
+      <div class="swiper-item swiper-slide">React Native</div>
+      <div class="swiper-item swiper-slide">Soft Skills</div>
+    </div>
+
+    <div class="about-button-wrapper">
+      <button class="about-button-next">
+        <svg width="32" height="32" class="next-btn-svg">
+          <use href="/101_js_Volodymyr180688/assets/icons-a67e2ed4.svg#arrow-right"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section> 
+
+    <section id="benefits" class="benefits-content">
+  <div class="benefits-container container">
+    <div class="benefits-title-container">
+      <h2 class="benefits-section-title">Benefits of working with me</h2>
+    </div>
+    <div class="benefits-main-container">
+      <ul class="benefits-list">
+        <li class="benefits-card">
+          <div class="benefits-card-content">
+            <div class="benefits-card-icon-container">
+              <svg width="24" height="24">
+                <use href="/101_js_Volodymyr180688/assets/icons-a67e2ed4.svg#user"></use>
+              </svg>
+            </div>
+            <h3 class="benefits-card-title">Expertise</h3>
+            <p class="benefits-card-text">
+              As a highly experienced developer, I have deep knowledge of
+              programming and website development.
+            </p>
+          </div>
+        </li>
+        <li class="benefits-card">
+          <div class="benefits-card-content">
+            <div class="benefits-card-icon-container">
+              <svg width="24" height="24">
+                <use href="/101_js_Volodymyr180688/assets/icons-a67e2ed4.svg#message-chat-circle"></use>
+              </svg>
+            </div>
+            <h3 class="benefits-card-title">Communication</h3>
+            <p class="benefits-card-text">
+              Understanding your needs and wants is my priority and I am always
+              open to discussions and corrections.
+            </p>
+          </div>
+        </li>
+        <li class="benefits-card">
+          <div class="benefits-card-content">
+            <div class="benefits-card-icon-container">
+              <svg width="24" height="24">
+                <use href="/101_js_Volodymyr180688/assets/icons-a67e2ed4.svg#brush"></use>
+              </svg>
+            </div>
+            <h3 class="benefits-card-title">Art</h3>
+            <p class="benefits-card-text">
+              Thanks to my creative nature, I am ready to accept challenges and
+              help you bring your ideas to life.
+            </p>
+          </div>
+        </li>
+        <li class="benefits-card benefits-last-child">
+          <div class="benefits-card-content">
+            <div class="benefits-card-icon-container">
+              <svg width="24" height="24">
+                <use href="/101_js_Volodymyr180688/assets/icons-a67e2ed4.svg#hourglass"></use>
+              </svg>
+            </div>
+            <h3 class="benefits-card-title">Urgent execution</h3>
+            <p class="benefits-card-text last-benefits">
+              I understand how important time is to you. Ready to work quickly
+              and efficiently, without reducing the quality of work.
+            </p>
+          </div>
+        </li>
+      </ul>
+      <a href="#work-together" class="benefits-link">Order the project</a>
+    </div>
+  </div>
+</section>
+
+    <section id="projects" class="projects">
+  <h2 class="visually-hidden">Projects</h2>
+  <div class="swiper">
+    <div class="swiper-wrapper projects-swiper-wrapper">
+      <div class="swiper-slide projects-swiper-slide">
+        <div class="slide-content">
+          <ul class="tech-list">
+            <li class="tech-list-item">#react</li>
+            <li class="tech-list-item">#js</li>
+            <li class="tech-list-item">#node.js</li>
+            <li class="tech-list-item">#git</li>
+          </ul>
+          <p class="slide-text">
+            Programming Across Borders: Ideas, Technologies, Innovations
+          </p>
+          <button type="button" class="see-project-btn">See project</button>
+        </div>
+        <div class="image-container">
+          <div class="gray-overlay"></div>
+          <picture>
+            <source
+              srcset="/101_js_Volodymyr180688/assets/image_tablet_1-7a4e1d6c.jpg 1x, /101_js_Volodymyr180688/assets/image_tablet_1@2x-0b41e42e.jpg 2x"
+              media="(min-width: 1440px)"
+            />
+            <source
+              srcset="/101_js_Volodymyr180688/assets/image_tablet_1-7a4e1d6c.jpg 1x, /101_js_Volodymyr180688/assets/image_tablet_1@2x-0b41e42e.jpg 2x"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="/101_js_Volodymyr180688/assets/image_mobile_1-d05b437b.jpg 1x, /101_js_Volodymyr180688/assets/image_mobile_1@2x-b007ea04.jpg 2x"
+              media="(max-width: 768px)"
+            />
+            <img
+              src="/101_js_Volodymyr180688/assets/image_mobile_1-d05b437b.jpg"
+              alt="project photo"
+            />
+          </picture>
+        </div>
+      </div>
+      <div class="swiper-slide projects-swiper-slide">
+        <div class="slide-content">
+          <ul class="tech-list">
+            <li class="tech-list-item">#react</li>
+            <li class="tech-list-item">#js</li>
+            <li class="tech-list-item">#node.js</li>
+            <li class="tech-list-item">#git</li>
+          </ul>
+          <p class="slide-text">
+            Programming Across Borders: Ideas, Technologies, Innovations
+          </p>
+          <button type="button" class="see-project-btn">See project</button>
+        </div>
+        <div class="image-container">
+          <div class="gray-overlay"></div>
+          <picture>
+            <source
+              srcset="/101_js_Volodymyr180688/assets/image_tablet_2-b336303c.jpg 1x, /101_js_Volodymyr180688/assets/image_tablet_2@2x-104f8e2d.jpg 2x"
+              media="(min-width: 1440px)"
+            />
+            <source
+              srcset="/101_js_Volodymyr180688/assets/image_tablet_2-b336303c.jpg 1x, /101_js_Volodymyr180688/assets/image_tablet_2@2x-104f8e2d.jpg 2x"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="/101_js_Volodymyr180688/assets/image_mobile_2-91c69961.jpg 1x, /101_js_Volodymyr180688/assets/image_mobile_2@2x-bfa3546f.jpg 2x"
+              media="(max-width: 768px)"
+            />
+            <img
+              src="/101_js_Volodymyr180688/assets/image_mobile_2-91c69961.jpg"
+              alt="project photo"
+            />
+          </picture>
+        </div>
+      </div>
+      <div class="swiper-slide projects-swiper-slide">
+        <div class="slide-content">
+          <ul class="tech-list">
+            <li class="tech-list-item">#react</li>
+            <li class="tech-list-item">#js</li>
+            <li class="tech-list-item">#node.js</li>
+            <li class="tech-list-item">#git</li>
+          </ul>
+          <p class="slide-text">
+            Programming Across Borders: Ideas, Technologies, Innovations
+          </p>
+          <button type="button" class="see-project-btn">See project</button>
+        </div>
+        <div class="image-container">
+          <div class="gray-overlay"></div>
+          <picture>
+            <source
+              srcset="/101_js_Volodymyr180688/assets/image_tablet_3-e5799ccb.jpg 1x, /101_js_Volodymyr180688/assets/image_tablet_3@2x-e276ea13.jpg 2x"
+              media="(min-width: 1440px)"
+            />
+            <source
+              srcset="/101_js_Volodymyr180688/assets/image_tablet_3-e5799ccb.jpg 1x, /101_js_Volodymyr180688/assets/image_tablet_3@2x-e276ea13.jpg 2x"
+              media="(min-width: 768px)"
+            />
+            <source
+              srcset="/101_js_Volodymyr180688/assets/image_mobile_3-c9027277.jpg 1x, /101_js_Volodymyr180688/assets/image_mobile_3@2x-fa77e8af.jpg 2x"
+              media="(max-width: 768px)"
+            />
+            <img
+              src="/101_js_Volodymyr180688/assets/image_mobile_3-c9027277.jpg"
+              alt="project photo"
+            />
+          </picture>
+        </div>
+      </div>
+    </div>
+
+    <div class="buttons-wrapper">
+      <div class="custom-button-prev">
+        <button type="button" class="prev-btn" disabled>
+          <svg width="32" height="32" class="prev-btn-svg">
+            <use href="/101_js_Volodymyr180688/assets/icons-a67e2ed4.svg#arrow-left"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="custom-button-next">
+        <button type="button" class="next-btn">
+          <svg width="32" height="32" class="next-btn-svg">
+            <use href="/101_js_Volodymyr180688/assets/icons-a67e2ed4.svg#arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="faq-section" id="section-faq">
+  <div class="faq-container container">
+    <h1 class="faq-section-title">FAQ</h1>
+
+    <div class="accordion-in-faq">
+      <ul class="faq-list">
+        <li class="accordion rigt-border">
+          <div class="faq-title faq-title-left" data-tab="tab1">
+            <h2>
+              What programming languages are most often used in your project?
+            </h2>
+            <div class="accordion-open" id="tab1">
+              <p>
+                In the field of web development, there are various technologies
+                and programming languages. Typically, this includes a
+                combination of frontend (client side) and backend (server side)
+                languages.
+              </p>
+            </div>
+            <span>
+              <svg class="faq-icon" width="20" height="20">
+                <use href="/101_js_Volodymyr180688/assets/icons-a67e2ed4.svg#Accordeon-top"></use>
+              </svg>
+            </span>
+          </div>
+        </li>
+
+        <li class="accordion border-none">
+          <div class="faq-title faq-title-right" data-tab="tab2">
+            <h2>How can I contact you?</h2>
+            <div class="accordion-open" id="tab2">
+              <p>
+                In the field of web development, there are various technologies
+                and programming languages. Typically, this includes a
+                combination of frontend (client side) and backend (server side)
+                languages.
+              </p>
+            </div>
+            <span>
+              <svg class="faq-icon" width="20" height="20">
+                <use href="/101_js_Volodymyr180688/assets/icons-a67e2ed4.svg#Accordeon-top"></use>
+              </svg>
+            </span>
+          </div>
+        </li>
+
+        <li class="accordion rigt-border">
+          <div class="faq-title faq-title-left" data-tab="tab3">
+            <h2>What are the deadlines for the project?</h2>
+            <div class="accordion-open" id="tab3">
+              <p>
+                The terms of project implementation depend to a large extent on
+                a number of factors, such as the scope of the project, its
+                complexity, and the availability of resources. Determining exact
+                deadlines is a difficult task, and it usually occurs during the
+                planning phase of the project.
+              </p>
+            </div>
+            <span>
+              <svg class="faq-icon" width="20" height="20">
+                <use href="/101_js_Volodymyr180688/assets/icons-a67e2ed4.svg#Accordeon-top"></use>
+              </svg>
+            </span>
+          </div>
+        </li>
+
+        <li class="accordion border-none">
+          <div class="faq-title faq-title-right" data-tab="tab4">
+            <h2>Do you provide advice or support?</h2>
+            <div class="accordion-open" id="tab4">
+              <p>
+                The terms of project implementation depend to a large extent on
+                a number of factors, such as the scope of the project, its
+                complexity, and the availability of resources. Determining exact
+                deadlines is a difficult task, and it usually occurs during the
+                planning phase of the project.
+              </p>
+            </div>
+            <span>
+              <svg class="faq-icon" width="20" height="20">
+                <use href="/101_js_Volodymyr180688/assets/icons-a67e2ed4.svg#Accordeon-top"></use>
+              </svg>
+            </span>
+          </div>
+        </li>
+
+        <li class="accordion rigt-border">
+          <div class="faq-title faq-title-left" data-tab="tab5">
+            <h2>What payment methods do you accept?</h2>
+            <div class="accordion-open" id="tab5">
+              <p>
+                Payment through credit and debit cards such as Visa, MasterCard,
+                specialized electronic payment systems such as PayPal, as well
+                as payments in cryptocurrencies such as Bitcoin, Ethereum and
+                others.
+              </p>
+            </div>
+            <span>
+              <svg class="faq-icon" width="20" height="20">
+                <use href="/101_js_Volodymyr180688/assets/icons-a67e2ed4.svg#Accordeon-top"></use>
+              </svg>
+            </span>
+          </div>
+        </li>
+
+        <li class="accordion border-none">
+          <div class="faq-title faq-title-right" data-tab="tab6">
+            <h2>
+              What does the process of developing a software product look like
+              from idea to implementation?
+            </h2>
+            <div class="accordion-open" id="tab6">
+              <p>
+                Payment through credit and debit cards such as Visa, MasterCard,
+                specialized electronic payment systems such as PayPal, as well
+                as payments in cryptocurrencies such as Bitcoin, Ethereum and
+                others.
+              </p>
+            </div>
+            <span>
+              <svg class="faq-icon" width="20" height="20">
+                <use href="/101_js_Volodymyr180688/assets/icons-a67e2ed4.svg#Accordeon-top"></use></svg
+            ></span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+    <!-- ====== оновлена версія, попередня - нижче закомітчена ============-->
+
+<section class="section covers-section">
+  <div class="container covers-container">
+    <h2 class="covers-title visually-hidden">Covers</h2>
+    <div class="content-covers">
+      <div class="marquee">
+        <ul class="marquee__inner">
+          <li class="marquee__line"><img class="marquee__line_img" srcset="/101_js_Volodymyr180688/assets/cover-8-3666c205.jpg 1x, /101_js_Volodymyr180688/assets/cover-8@2x-5983be8c.jpg 2x" src="/101_js_Volodymyr180688/assets/cover-8-3666c205.jpg" width="830" height="462">
+          </li>
+          <li class="marquee__line">
+            <img class="marquee__line_img" srcset="/101_js_Volodymyr180688/assets/cover-9-2774939d.jpg 1x, /101_js_Volodymyr180688/assets/cover-9@2x-f0346518.jpg 2x" src="/101_js_Volodymyr180688/assets/cover-9-2774939d.jpg" width="830" height="462">
+          </li>
+          <li class="marquee__line">
+            <img class="marquee__line_img" srcset="/101_js_Volodymyr180688/assets/cover-10-690dd13b.jpg 1x, /101_js_Volodymyr180688/assets/cover-10@2x-11132803.jpg 2x" src="/101_js_Volodymyr180688/assets/cover-10-690dd13b.jpg" width="830" height="462">
+          </li>
+          <li class="marquee__line">
+            <img class="marquee__line_img" srcset="/101_js_Volodymyr180688/assets/cover-1-2d59559c.jpg 1x, /101_js_Volodymyr180688/assets/cover-1@2x-fe48c942.jpg 2x" src="/101_js_Volodymyr180688/assets/cover-1-2d59559c.jpg" width="830" height="462">
+          </li>
+          <li class="marquee__line">
+            <img class="marquee__line_img" srcset="/101_js_Volodymyr180688/assets/cover-2-fa2c5b59.jpg 1x, /101_js_Volodymyr180688/assets/cover-2@2x-32e1b76a.jpg 2x" src="/101_js_Volodymyr180688/assets/cover-2-fa2c5b59.jpg" width="830" height="462">
+          </li>
+          <li class="marquee__line">
+            <img class="marquee__line_img" srcset="/101_js_Volodymyr180688/assets/cover-3-3183c7ab.jpg 1x, /101_js_Volodymyr180688/assets/cover-3@2x-028b95ab.jpg 2x" src="/101_js_Volodymyr180688/assets/cover-3-3183c7ab.jpg" width="830" height="462">
+          </li>
+          <li class="marquee__line">
+            <img class="marquee__line_img" srcset="/101_js_Volodymyr180688/assets/cover-4-a6f8a2bb.jpg 1x, /101_js_Volodymyr180688/assets/cover-4@2x-b67a095e.jpg 2x" src="/101_js_Volodymyr180688/assets/cover-4-a6f8a2bb.jpg" width="830" height="462">
+          </li>
+          <li class="marquee__line">
+            <img class="marquee__line_img" srcset="/101_js_Volodymyr180688/assets/cover-5-5806bd02.jpg 1x, /101_js_Volodymyr180688/assets/cover-5@2x-b135cb40.jpg 2x" src="/101_js_Volodymyr180688/assets/cover-5-5806bd02.jpg" width="830" height="462">
+          </li>
+
+        </ul>
+
+        <ul class="marquee__inner">
+          <li class="marquee__line">
+            <img class="marquee__line_img" srcset="/101_js_Volodymyr180688/assets/cover-2-fa2c5b59.jpg 1x, /101_js_Volodymyr180688/assets/cover-2@2x-32e1b76a.jpg 2x" src="/101_js_Volodymyr180688/assets/cover-2-fa2c5b59.jpg" width="830" height="462">
+          </li>
+
+          <li class="marquee__line">
+            <img class="marquee__line_img" srcset="/101_js_Volodymyr180688/assets/cover-3-3183c7ab.jpg 1x, /101_js_Volodymyr180688/assets/cover-3@2x-028b95ab.jpg 2x" src="/101_js_Volodymyr180688/assets/cover-3-3183c7ab.jpg" width="830" height="462">
+          </li>
+          <li class="marquee__line">
+            <img class="marquee__line_img" srcset="/101_js_Volodymyr180688/assets/cover-1-2d59559c.jpg 1x, /101_js_Volodymyr180688/assets/cover-1@2x-fe48c942.jpg 2x" src="/101_js_Volodymyr180688/assets/cover-1-2d59559c.jpg" width="830" height="462">
+          </li>
+          <li class="marquee__line">
+            <img class="marquee__line_img" srcset="/101_js_Volodymyr180688/assets/cover-2-fa2c5b59.jpg 1x, /101_js_Volodymyr180688/assets/cover-2@2x-32e1b76a.jpg 2x" src="/101_js_Volodymyr180688/assets/cover-2-fa2c5b59.jpg" width="830" height="462">
+          </li>
+          <li class="marquee__line">
+            <img class="marquee__line_img" srcset="/101_js_Volodymyr180688/assets/cover-3-3183c7ab.jpg 1x, /101_js_Volodymyr180688/assets/cover-3@2x-028b95ab.jpg 2x" src="/101_js_Volodymyr180688/assets/cover-3-3183c7ab.jpg" width="830" height="462">
+          </li>
+          <li class="marquee__line"><img class="marquee__line_img" srcset="/101_js_Volodymyr180688/assets/cover-4-a6f8a2bb.jpg 1x, /101_js_Volodymyr180688/assets/cover-4@2x-b67a095e.jpg 2x" src="/101_js_Volodymyr180688/assets/cover-4-a6f8a2bb.jpg" width="830" height="462">
+          </li>
+          <li class="marquee__line">
+            <img class="marquee__line_img" srcset="/101_js_Volodymyr180688/assets/cover-5-5806bd02.jpg 1x, /101_js_Volodymyr180688/assets/cover-5@2x-b135cb40.jpg 2x" src="/101_js_Volodymyr180688/assets/cover-5-5806bd02.jpg" width="830" height="462">
+          </li>
+          <li class="marquee__line">
+            <img class="marquee__line_img" srcset="/101_js_Volodymyr180688/assets/cover-6-fbcb2be5.jpg 1x, /101_js_Volodymyr180688/assets/cover-6@2x-17941236.jpg 2x" src="/101_js_Volodymyr180688/assets/cover-6-fbcb2be5.jpg" width="830" height="462">
+          </li>
+        </ul>
+
+        <ul class="marquee__inner">
+          <li class="marquee__line"><img class="marquee__line_img" srcset="/101_js_Volodymyr180688/assets/cover-1-2d59559c.jpg 1x, /101_js_Volodymyr180688/assets/cover-1@2x-fe48c942.jpg 2x" src="/101_js_Volodymyr180688/assets/cover-1-2d59559c.jpg" width="830" height="462">
+          </li>
+          <li class="marquee__line"><img class="marquee__line_img" srcset="/101_js_Volodymyr180688/assets/cover-2-fa2c5b59.jpg 1x, /101_js_Volodymyr180688/assets/cover-2@2x-32e1b76a.jpg 2x" src="/101_js_Volodymyr180688/assets/cover-2-fa2c5b59.jpg" width="830" height="462">
+          </li>
+          <li class="marquee__line"><img class="marquee__line_img" srcset="/101_js_Volodymyr180688/assets/cover-5-5806bd02.jpg 1x, /101_js_Volodymyr180688/assets/cover-5@2x-b135cb40.jpg 2x" src="/101_js_Volodymyr180688/assets/cover-5-5806bd02.jpg" width="830" height="462">
+          </li>
+          <li class="marquee__line"><img class="marquee__line_img" srcset="/101_js_Volodymyr180688/assets/cover-6-fbcb2be5.jpg 1x, /101_js_Volodymyr180688/assets/cover-6@2x-17941236.jpg 2x" src="/101_js_Volodymyr180688/assets/cover-6-fbcb2be5.jpg" width="830" height="462">
+          </li>
+          <li class="marquee__line"><img class="marquee__line_img" srcset="/101_js_Volodymyr180688/assets/cover-7-1dd075ef.jpg 1x, /101_js_Volodymyr180688/assets/cover-7@2x-0b723d78.jpg 2x" src="/101_js_Volodymyr180688/assets/cover-7-1dd075ef.jpg" width="830" height="462">
+          </li>
+          <li class="marquee__line"><img class="marquee__line_img" srcset="/101_js_Volodymyr180688/assets/cover-8-3666c205.jpg 1x, /101_js_Volodymyr180688/assets/cover-8@2x-5983be8c.jpg 2x" src="/101_js_Volodymyr180688/assets/cover-8-3666c205.jpg" width="830" height="462">
+          </li>
+          <li class="marquee__line"><img class="marquee__line_img" srcset="/101_js_Volodymyr180688/assets/cover-9-2774939d.jpg 1x, /101_js_Volodymyr180688/assets/cover-9@2x-f0346518.jpg 2x" src="/101_js_Volodymyr180688/assets/cover-9-2774939d.jpg" width="830" height="462">
+          </li>
+          <li class="marquee__line"><img class="marquee__line_img" srcset="/101_js_Volodymyr180688/assets/cover-10-690dd13b.jpg 1x, /101_js_Volodymyr180688/assets/cover-10@2x-11132803.jpg 2x" src="/101_js_Volodymyr180688/assets/cover-10-690dd13b.jpg" width="830" height="462">
+          </li>
+        </ul>
+
+        <ul class="marquee__inner">
+          <li class="marquee__line"><img class="marquee__line_img" srcset="/101_js_Volodymyr180688/assets/cover-8-3666c205.jpg 1x, /101_js_Volodymyr180688/assets/cover-8@2x-5983be8c.jpg 2x" src="/101_js_Volodymyr180688/assets/cover-8-3666c205.jpg" width="830" height="462"></li>
+          <li class="marquee__line"><img class="marquee__line_img" srcset="/101_js_Volodymyr180688/assets/cover-9-2774939d.jpg 1x, /101_js_Volodymyr180688/assets/cover-9@2x-f0346518.jpg 2x" src="/101_js_Volodymyr180688/assets/cover-9-2774939d.jpg" width="830" height="462">
+          </li>
+          <li class="marquee__line"><img class="marquee__line_img" srcset="/101_js_Volodymyr180688/assets/cover-10-690dd13b.jpg 1x, /101_js_Volodymyr180688/assets/cover-10@2x-11132803.jpg 2x" src="/101_js_Volodymyr180688/assets/cover-10-690dd13b.jpg" width="830" height="462">
+          </li>
+          <li class="marquee__line"><img class="marquee__line_img" srcset="/101_js_Volodymyr180688/assets/cover-1-2d59559c.jpg 1x, /101_js_Volodymyr180688/assets/cover-1@2x-fe48c942.jpg 2x" src="/101_js_Volodymyr180688/assets/cover-1-2d59559c.jpg" width="830" height="462">
+          </li>
+          <li class="marquee__line"><img class="marquee__line_img" srcset="/101_js_Volodymyr180688/assets/cover-2-fa2c5b59.jpg 1x, /101_js_Volodymyr180688/assets/cover-2@2x-32e1b76a.jpg 2x" src="/101_js_Volodymyr180688/assets/cover-2-fa2c5b59.jpg" width="830" height="462">
+          </li>
+          <li class="marquee__line"><img class="marquee__line_img" srcset="/101_js_Volodymyr180688/assets/cover-3-3183c7ab.jpg 1x, /101_js_Volodymyr180688/assets/cover-3@2x-028b95ab.jpg 2x" src="/101_js_Volodymyr180688/assets/cover-3-3183c7ab.jpg" width="830" height="462">
+          </li>
+          <li class="marquee__line"><img class="marquee__line_img" srcset="/101_js_Volodymyr180688/assets/cover-4-a6f8a2bb.jpg 1x, /101_js_Volodymyr180688/assets/cover-4@2x-b67a095e.jpg 2x" src="/101_js_Volodymyr180688/assets/cover-4-a6f8a2bb.jpg" width="830" height="462">
+          </li>
+          <li class="marquee__line"><img class="marquee__line_img" srcset="/101_js_Volodymyr180688/assets/cover-5-5806bd02.jpg 1x, /101_js_Volodymyr180688/assets/cover-5@2x-b135cb40.jpg 2x" src="/101_js_Volodymyr180688/assets/cover-5-5806bd02.jpg" width="830" height="462">
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+    <section class="container reviws-swiper">
+  <h2 class="reviews-name">REVIEWS</h2>
+  <ul class="reviews-list swiper-wrapper"></ul>
+
+  <div class="reviews-nav">
+    <div class="reviews-button-prev">
+      <button type="button" class="reviews-prev-btn" disabled>
+        <svg width="32" height="32" class="reviews-list-prev-icon">
+          <use href="/101_js_Volodymyr180688/assets/icons-a67e2ed4.svg#arrow-left"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="reviews-button-next">
+      <button type="button" class="reviews-next-btn">
+        <svg width="32" height="32" class="reviews-list-next-icon">
+          <use href="/101_js_Volodymyr180688/assets/icons-a67e2ed4.svg#arrow-right"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+    <footer>
+  <section class="footer-section section" id="work-together">
+    <div class="footer-container container">
+      <div class="footer-title-wrapper">
+        <a href="https://volodymyr180688.github.io/JavaScriptMasters/">
+          <picture>
+            <source
+              srcset="/101_js_Volodymyr180688/assets/author-desktop-footer-4ee7cabb.png 1x, /101_js_Volodymyr180688/assets/author-desktop-footer@2x-90c4b2c2.png "
+              media="(min-width: 1440px)"
+            />
+
+            <source
+              srcset="data:image/png;base64,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 1x, /101_js_Volodymyr180688/assets/author-tablet-footer@2x-a6de494b.png "
+              media="(min-width: 768px)"
+            />
+
+            <source
+              srcset="data:image/png;base64,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 1x, /101_js_Volodymyr180688/assets/author-mobile-footer@2x-5f6aff5f.png "
+              media="(max-width: 767px)"
+            />
+
+            <img
+              class="footer-img"
+              src="/images/footer/author-mobile-footer.jpg"
+              alt="Lloyd Jefferson - a talented programmer"
+            />
+          </picture>
+        </a>
+
+        <h2 class="footer-title">
+          Let's <span class="color-accent">work</span>
+        </h2>
+        <h3 class="footer-title">together</h3>
+      </div>
+
+      <form class="footer-form">
+        <div class="footer-form-fields-wrapper">
+          <div class="green-or-red-bottom-line">
+            <input
+              class="footer-form-input"
+              id="userEmail"
+              name="userEmail"
+              type="email"
+              placeholder="clients@gmail.com"
+              pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="footer-form-fields-wrapper">
+          <div class="input-bottom-line">
+            <input
+              class="footer-form-input"
+              id="user-comment"
+              name="userComment"
+              type="text"
+              placeholder="comments"
+              autocomplete="off"
+              required
+            />
+          </div>
+        </div>
+
+        <button class="footer-form-btn" type="submit">Send</button>
+      </form>
+
+      <address class="footer-address">
+        <a class="footer-link" href="mailto:lloydjefferson@gmail.com"
+          >lloydjefferson@gmail.com</a
+        >
+        <a class="footer-link" href="tel:+3801111111111">+380 11 1111 11 11</a>
+      </address>
+    </div>
+  </section>
+</footer>
+
+<!-- footer back-drop & modal window -->
+
+<div class="footer-backdrop">
+  <div class="footer-modal">
+    <button class="footer-modal-close-btn" id="footerBtn">
+      <svg
+        class="footer-modal-close-btn-icon"
+        width="24"
+        height="24"
+        aria-label="close footer modal icon"
+      >
+        <use href="/101_js_Volodymyr180688/assets/icons-a67e2ed4.svg#icon-footer-modal-close-btn"></use>
+      </svg>
+    </button>
+    <div class="footer-modal-response"></div>
+  </div>
+</div>
+
+    <div class="mobile-menu">
+  <div class="container">
+    <button class="close-menu-btn" type="button">
+      <svg class="close-menu-icon" width="14" height="14">
+        <use href="../images/icons.svg#close"></use>
+      </svg>
+    </button>
+    <nav class="menu-navigation">
+      <ul class="mobile-menu-list">
+        <li class="mobile-menu-list-item">
+          <a href="#about-me" class="mobile-menu-item-link">About me</a>
+        </li>
+        <li class="mobile-menu-list-item">
+          <a href="#benefits" class="mobile-menu-item-link">Benefits</a>
+        </li>
+        <li class="mobile-menu-list-item">
+          <a href="#projects" class="mobile-menu-item-link">Projects</a>
+        </li>
+        <li class="mobile-menu-list-item">
+          <a href="#faq" class="mobile-menu-item-link">FAQ</a>
+        </li>
+      </ul>
+    </nav>
+
+    <button type="button" class="mobile-menu-button">
+      <a class="mobile-menu-button-link" href="#project">Order the project</a>
+    </button>
+  </div>
+</div>
+
+    
+  </body>
+</html>
